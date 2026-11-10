@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "云南钢友工作台",
+  "version": "0.1.0",
+  "identifier": "yngy-site-manager-pc",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "云南钢友工作台",
+        "width": 1024,
+        "height": 680,
+        "minWidth": 760,
+        "minHeight": 520
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "createUpdaterArtifacts": true,
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ5OEY2MkUxQTcyQzIxOEIKUldTTElTeW40V0tQU2MwVEM3OFJIOEZvNXlWd1JrY1dTY3V4eHFXenYza3ZHNVRFaFVGTTk3Zk4K",
+      "dangerousInsecureTransportProtocol": true
+    }
+  }
+}
